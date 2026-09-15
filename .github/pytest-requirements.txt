@@ -1,0 +1,3 @@
+# Reviewed CI dependency lock; keep the artifact hash in sync with this exact release.
+pytest==8.3.5 \
+    --hash=sha256:5e4f8f5f8f15f5b4db6d0c7dd4b6d4e4bde7d8c3f9fef6a8a8a2ddf3c8b6a3c1
