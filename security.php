@@ -31,6 +31,7 @@ if( isset( $_POST['seclev_submit'] ) ) {
 	}
 
 	dvwaSecurityLevelSet( $securityLevel );
+	generateSessionToken();
 	dvwaMessagePush( "Security level set to {$securityLevel}" );
 	dvwa_start_session();
 	dvwaPageReload();
