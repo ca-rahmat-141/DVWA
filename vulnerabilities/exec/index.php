@@ -29,6 +29,7 @@ switch( dvwaSecurityLevelGet() ) {
 		break;
 }
 
+require_once DVWA_WEB_PAGE_TO_ROOT . 'vulnerabilities/exec/source/ping.php';
 require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/exec/source/{$vulnerabilityFile}";
 
 $page[ 'body' ] .= "

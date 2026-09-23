@@ -1,30 +1,16 @@
 <?php
 
 if( isset( $_POST[ 'Submit' ]  ) ) {
-	// Get input
-	$target = $_REQUEST[ 'ip' ];
-
-	// Set blacklist
-	$substitutions = array(
-		'&&' => '',
-		';'  => '',
-	);
-
-	// Remove any of the characters in the array (blacklist).
-	$target = str_replace( array_keys( $substitutions ), $substitutions, $target );
-
-	// Determine OS and execute the ping command.
-	if( stristr( php_uname( 's' ), 'Windows NT' ) ) {
-		// Windows
-		$cmd = shell_exec( 'ping  ' . $target );
-	}
-	else {
-		// *nix
-		$cmd = shell_exec( 'ping  -c 4 ' . $target );
-	}
+	// Run ping through the shared, validated process helper.
+	$cmd = dvwaExecPing( $_REQUEST[ 'ip' ] ?? null );
 
 	// Feedback for the end user
-	$html .= "<pre>{$cmd}</pre>";
+	if( $cmd === false ) {
+		$html .= '<pre>ERROR: You have entered an invalid IP.</pre>';
+	}
+	elseif( $cmd !== null ) {
+		$html .= "<pre>{$cmd}</pre>";
+	}
 }
 
 ?>
