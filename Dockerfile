@@ -16,4 +16,9 @@ RUN apt-get update \
  && docker-php-ext-install gd mysqli pdo pdo_mysql
 
 COPY --chown=www-data:www-data . .
-COPY --chown=www-data:www-data config/config.inc.php.unauth config/config.inc.php
+COPY --chown=www-data:www-data config/config.inc.php.auth config/config.inc.php
+COPY docker-entrypoint.sh /usr/local/bin/dvwa-entrypoint
+RUN chmod 755 /usr/local/bin/dvwa-entrypoint
+
+ENTRYPOINT ["dvwa-entrypoint"]
+CMD ["apache2-foreground"]
