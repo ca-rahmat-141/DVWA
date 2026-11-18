@@ -168,10 +168,16 @@ Then, to get started:
 3. Open a terminal of your choice and change its working directory into this folder (`DVWA`).
 4. Run `docker compose up -d`.
 
-DVWA is now available at `http://localhost:4280`.
+DVWA is now available at `http://localhost:4280`. The Docker image uses the authenticated configuration by default.
 
 **Notice that for running DVWA in containers, the web server is listening on port 4280 instead of the usual port of 80.**
 For more information on this decision, see [I want to run DVWA on a different port](#i-want-to-run-dvwa-on-a-different-port).
+
+#### Unauthenticated training mode
+
+Unauthenticated mode is only for isolated training environments. It requires explicit opt-in and is available through `compose.training.yml`, which places DVWA and its database on an internal Docker network and publishes no ports. Start it with `docker compose -f compose.training.yml up -d`. Training tools must also be attached to that network to reach DVWA at `http://dvwa`.
+
+Do not publish or attach this training service to an external or host-accessible network. The container refuses to start with authentication disabled unless both `DVWA_UNAUTHENTICATED_TRAINING=true` and `DVWA_ISOLATED_NETWORK=true` are set and the container has no default network route; the training Compose file uses an internal network and publishes no ports. Keep the default `compose.yml` for normal authenticated use.
 
 #### Local Build
 
