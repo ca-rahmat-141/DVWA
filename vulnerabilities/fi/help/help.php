@@ -36,7 +36,7 @@
 		<h3>Medium Level</h3>
 		<p>The developer has read up on some of the issues with LFI/RFI, and decided to filter the input. However, the patterns that are used, isn't enough.</p>
 		<pre>Spoiler: <span class="spoiler">LFI: Possible, due to it only cycling through the pattern matching once</span>.
-			Spoiler: <span class="spoiler">RFI: <?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/wrappers.php', 'PHP Streams' ); ?></span>.</pre>
+			Spoiler: <span class="spoiler">RFI: <a href="https://secure.php.net/manual/en/wrappers.php" target="_blank">PHP Streams</a></span>.</pre>
 
 		<br />
 
@@ -58,9 +58,9 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Remote_File_Inclusion', 'Wikipedia - File inclusion vulnerability' ); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion', 'WSTG - Local File Inclusion' ); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion', 'WSTG - Remote File Inclusion' ); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/vulnerabilities/PHP_File_Inclusion', 'PHP File Inclusion' ); ?></p>
+	<p>Reference: <a href="https://en.wikipedia.org/wiki/Remote_File_Inclusion" target="_blank">Wikipedia - File inclusion vulnerability</a></p>
+	<p>Reference: <a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion" target="_blank">WSTG - Local File Inclusion</a></p>
+	<p>Reference: <a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion" target="_blank">WSTG - Remote File Inclusion</a></p>
+	<p>Reference: <a href="https://owasp.org/www-community/vulnerabilities/PHP_File_Inclusion" target="_blank">PHP File Inclusion</a></p>
 
 </div>

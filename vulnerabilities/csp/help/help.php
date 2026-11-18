@@ -52,7 +52,7 @@ wrong_content_type.js - This will not work as the web server ignores the file ex
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://content-security-policy.com/', "Content Security Policy Reference" ); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP', "Mozilla Developer Network - CSP: script-src"); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/', "Mozilla Security Blog - CSP for the web we have" ); ?></p>
+	<p>Reference: <a href="https://content-security-policy.com/" target="_blank">Content Security Policy Reference</a></p>
+	<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank">Mozilla Developer Network - CSP: script-src</a></p>
+	<p>Reference: <a href="https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/" target="_blank">Mozilla Security Blog - CSP for the web we have</a></p>
 </div>

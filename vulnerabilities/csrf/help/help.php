@@ -67,5 +67,5 @@ user-token: 026d0caed93471b507ed460ebddbd096
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/csrf' ); ?></p>
+	<p>Reference: <a href="https://owasp.org/www-community/attacks/csrf" target="_blank">https://owasp.org/www-community/attacks/csrf</a></p>
 </div>

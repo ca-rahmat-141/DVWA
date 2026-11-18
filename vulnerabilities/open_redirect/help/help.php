@@ -53,5 +53,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Password_cracking' ); ?></p>
+	<p>Reference: <a href="https://en.wikipedia.org/wiki/Password_cracking" target="_blank">https://en.wikipedia.org/wiki/Password_cracking</a></p>
 </div>
