@@ -16,4 +16,11 @@ RUN apt-get update \
  && docker-php-ext-install gd mysqli pdo pdo_mysql
 
 COPY --chown=www-data:www-data . .
-COPY --chown=www-data:www-data config/config.inc.php.unauth config/config.inc.php
+
+# Authentication is enabled unless an image build explicitly selects the
+# unauthenticated training config. The container entrypoint requires the
+# isolated-training opt-in before allowing that config to start.
+ARG DVWA_CONFIG=config.inc.php.auth
+COPY --chown=www-data:www-data config/${DVWA_CONFIG} config/config.inc.php
+COPY docker-entrypoint.sh /usr/local/bin/dvwa-entrypoint
+ENTRYPOINT ["sh", "/usr/local/bin/dvwa-entrypoint"]
