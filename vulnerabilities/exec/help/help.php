@@ -42,7 +42,7 @@
 		<h3>High Level</h3>
 		<p>In the high level, the developer goes back to the drawing board and puts in even more pattern to match. But even this isn't enough.</p>
 		<p>The developer has either made a slight typo with the filters and believes a certain PHP command will save them from this mistake.</p>
-		<pre>Spoiler: <span class="spoiler"><?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.trim.php', 'trim()' ); ?>
+		<pre>Spoiler: <span class="spoiler"><a href="https://secure.php.net/manual/en/function.trim.php" target="_blank">trim()</a>
 			removes all leading & trailing spaces, right?</span>.</pre>
 
 		<br />
@@ -58,5 +58,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/Command_Injection' ); ?></p>
+	<p>Reference: <a href="https://owasp.org/www-community/attacks/Command_Injection" target="_blank">https://owasp.org/www-community/attacks/Command_Injection</a></p>
 </div>

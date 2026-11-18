@@ -42,7 +42,7 @@
 		<br />
 
 		<h3>Impossible Level</h3>
-		<p>Using inbuilt PHP functions (such as "<?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.htmlspecialchars.php', 'htmlspecialchars()' ); ?>"),
+		<p>Using inbuilt PHP functions (such as "<a href="https://secure.php.net/manual/en/function.htmlspecialchars.php" target="_blank">htmlspecialchars()</a>"),
 			its possible to escape any values which would alter the behaviour of the input.</p>
 	</div></td>
 	</tr>
@@ -52,5 +52,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' ); ?></p>
+	<p>Reference: <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" target="_blank">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></p>
 </div>

@@ -44,9 +44,9 @@
 
 	<p>Reference:</p>
 	<ul>
-		<li><?php echo dvwaExternalLinkUrlGet( 'https://www.youtube.com/watch?v=8UqHCrGdxOM' )?></li>
-		<li><?php echo dvwaExternalLinkUrlGet( 'https://www.w3schools.com/js/' )?></li>
-		<li><?php echo dvwaExternalLinkUrlGet( 'https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL' )?></li>
-		<li><?php echo dvwaExternalLinkUrlGet( 'https://www.youtube.com/playlist?list=PLC9K7uaDMdAUNktlDTxsmj6rJBf4Q9TR5' )?></li>
+		<li><a href="https://www.youtube.com/watch?v=8UqHCrGdxOM" target="_blank">https://www.youtube.com/watch?v=8UqHCrGdxOM</a></li>
+		<li><a href="https://www.w3schools.com/js/" target="_blank">https://www.w3schools.com/js/</a></li>
+		<li><a href="https://www.youtube.com/watch?v=cs7EQdWO5o0&amp;index=17&amp;list=WL" target="_blank">https://www.youtube.com/watch?v=cs7EQdWO5o0&amp;index=17&amp;list=WL</a></li>
+		<li><a href="https://www.youtube.com/playlist?list=PLC9K7uaDMdAUNktlDTxsmj6rJBf4Q9TR5" target="_blank">https://www.youtube.com/playlist?list=PLC9K7uaDMdAUNktlDTxsmj6rJBf4Q9TR5</a></li>
 	</ul>
 </div>

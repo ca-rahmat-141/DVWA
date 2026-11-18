@@ -35,6 +35,6 @@
 
 	</div>
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/01-Testing_for_Session_Management_Schema', 'WSTG - Session Management Schema' ); ?></p>
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html', 'OWASP Cheat Sheet - Session Management' ); ?></p>
+	<p>Reference: <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/01-Testing_for_Session_Management_Schema" target="_blank">WSTG - Session Management Schema</a></p>
+	<p>Reference: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html" target="_blank">OWASP Cheat Sheet - Session Management</a></p>
 </div>
