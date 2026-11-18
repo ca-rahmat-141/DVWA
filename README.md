@@ -168,7 +168,9 @@ Then, to get started:
 3. Open a terminal of your choice and change its working directory into this folder (`DVWA`).
 4. Run `docker compose up -d`.
 
-DVWA is now available at `http://localhost:4280`.
+DVWA is now available at `http://localhost:4280`. The Docker image enables application authentication by default.
+
+To opt into unauthenticated labs for isolated training only, run `docker compose --profile unauthenticated-training up -d dvwa-training`. This uses a separate `internal: true` network and publishes no host ports; access the training service only from a peer container attached to that isolated network. Do not publish or attach the unauthenticated service to any other network. The image startup check refuses to run a configuration with `disable_authentication=true` unless `DVWA_UNAUTHENTICATED_TRAINING=isolated` is explicitly set.
 
 **Notice that for running DVWA in containers, the web server is listening on port 4280 instead of the usual port of 80.**
 For more information on this decision, see [I want to run DVWA on a different port](#i-want-to-run-dvwa-on-a-different-port).
@@ -268,7 +270,7 @@ You will also need to set the security level to one that is appropriate to the t
 $_DVWA[ 'default_security_level' ] = 'low';
 ```
 
-In this state, you can access all the features without needing to log in and set any cookies.
+In this state, you can access all the features without needing to log in and set any cookies. This option removes an important access control and must only be used in an isolated training environment. For Docker, use the opt-in `dvwa-training` service described above; it has no published host port and is attached only to a Docker internal network. The container startup check refuses to start the unauthenticated configuration without the explicit training-mode environment setting.
 
 ### Folder Permissions
 

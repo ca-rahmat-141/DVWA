@@ -1,9 +1,12 @@
 volumes:
   dvwa:
+  dvwa-training:
 
 
 networks:
   dvwa:
+  dvwa-training:
+    internal: true
 
 
 services:
@@ -33,4 +36,40 @@ services:
       - dvwa:/var/lib/mysql
     networks:
       - dvwa
+    restart: unless-stopped
+
+  # Unauthenticated labs are opt-in and have no host-published ports. Access
+  # them only from containers attached to the internal training network.
+  dvwa-training:
+    profiles:
+      - unauthenticated-training
+    build:
+      context: .
+      args:
+        DVWA_CONFIG: config.inc.php.unauth
+    image: dvwa:unauthenticated-training
+    environment:
+      - DB_SERVER=db-training
+      - DVWA_UNAUTHENTICATED_TRAINING=isolated
+    depends_on:
+      - db-training
+    networks:
+      - dvwa-training
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  db-training:
+    profiles:
+      - unauthenticated-training
+    image: docker.io/library/mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=dvwa
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=p@ssw0rd
+    volumes:
+      - dvwa-training:/var/lib/mysql
+    networks:
+      - dvwa-training
     restart: unless-stopped
